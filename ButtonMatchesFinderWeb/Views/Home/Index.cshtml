@@ -1,0 +1,26 @@
+﻿@model ButtonMatchesFinderWeb.Models.FindModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <form asp-action="Find" asp-controller="Home" asp-antiforgery="true">
+        <div>
+            <div>
+                <label asp-for="OriginUrl"></label>
+                <input type="text" asp-for="OriginUrl" />
+            </div>
+            <div>
+                <label asp-for="OriginId"></label>
+                <input asp-for="OriginId" />
+            </div>
+            <div>
+                <label asp-for="SampleUrl"></label>
+                <input asp-for="SampleUrl" />
+            </div>
+            <div>
+                <input type="submit" value="Find" />
+            </div>
+        </div>
+    </form>
+</div>

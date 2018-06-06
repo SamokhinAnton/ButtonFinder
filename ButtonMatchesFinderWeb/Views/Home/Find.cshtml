@@ -1,0 +1,17 @@
+﻿@model ButtonMatchesFinderWeb.Models.MatchResultModel
+
+@{
+    ViewData["Title"] = "Result Page";
+}
+
+<div>
+    <p><b>Element:</b> @Model.Element.OuterHtml</p>
+    <p><b>Xpath:</b> @Model.Element.XPath</p>
+    <p>Matching parameters</p>
+    <ul>
+        @foreach (var parameter in Model.MatchParams)
+        {
+            <li><p><b>@parameter.Key:</b>  @parameter.Value</p></li>
+        }
+    </ul>
+</div>
